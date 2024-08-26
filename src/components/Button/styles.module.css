@@ -1,0 +1,28 @@
+.btn {
+  height: 48px;
+  background-color: white;
+  border: 1px solid #c4c4c4;
+  white-space: nowrap;
+  cursor: pointer;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.grayBG {
+  background-color: #c4c4c4;
+}
+
+.small {
+  width: 100px;
+}
+
+.medium {
+  width: 150px;
+}
+
+.large {
+  width: 200px;
+}

@@ -1,0 +1,25 @@
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  gap: 20px;
+}
+
+/* .btn__gray {
+  background-color: #c4c4c4;
+}
+
+.btn {
+  width: 200px;
+  height: 48px;
+  background-color: white;
+  border: 1px solid #c4c4c4;
+  white-space: nowrap;
+  cursor: pointer;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+} */
