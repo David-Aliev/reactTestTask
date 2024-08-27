@@ -13,7 +13,7 @@ function UserInfo() {
         <Input user="Status" placeholder="Activeh" />
       </div>
       <div className={styles.user__info_btns}>
-        <Button width="medium" text="undo" />
+        <Button width="small" text="undo" />
         <Button width="large" text="save" />
       </div>
     </div>

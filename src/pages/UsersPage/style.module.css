@@ -1,0 +1,25 @@
+.title {
+  text-align: center;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 6px;
+  text-transform: capitalize;
+  color: black;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.filters {
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+}

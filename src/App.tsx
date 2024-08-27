@@ -1,16 +1,12 @@
-import Header from "./components/Header/Header";
-import UserInfo from "./components/UserInfo/UserInfo";
+import Layout from "./components/Layout/Layout";
 
-import EditUser from "./pages/EditUser/EditUser";
+import EditUser from "./pages/EditUserPage/EditUser";
 function App() {
   return (
     <>
-      <Header />
-      <hr></hr>
-      <div className="user__container">
+      <Layout>
         <EditUser />
-        <UserInfo />
-      </div>
+      </Layout>
     </>
   );
 }

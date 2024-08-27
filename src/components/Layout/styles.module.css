@@ -1,0 +1,7 @@
+.user__container {
+  max-width: 1220px;
+  padding: 20px 80px;
+  margin: 0 auto;
+  border: 2px solid black;
+  margin-top: 80px;
+}

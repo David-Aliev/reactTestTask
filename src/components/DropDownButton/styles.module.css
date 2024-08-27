@@ -1,0 +1,102 @@
+.dropdown_btn {
+  position: relative;
+  height: 48px;
+  width: 220px;
+  background-color: white;
+  border: 1px solid black;
+  white-space: nowrap;
+  cursor: pointer;
+
+  padding: 12px 24px;
+  text-align: start;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.dropdown_btn::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 12px;
+  width: 16px;
+  height: 16px;
+  background: url("../../assets/Arrows.svg");
+}
+
+.dropwdown__menu {
+  width: 220px;
+  max-height: 100px;
+  overflow-y: auto;
+  background-color: #fff;
+  z-index: 1000;
+  scrollbar-width: thin;
+  border: 1px solid black;
+  scrollbar-color: #000 transparent; /* Колір скролбару та фону треку */
+}
+
+.dropdown_menu::-webkit-scrollbar {
+  width: 4px; /* Ширина скролбару */
+}
+
+.dropdown_menu::-webkit-scrollbar-thumb {
+  background-color: #000; /* Колір скролбару */
+  border-radius: 10px; /* Закруглені кути */
+}
+
+.dropdown_menu::-webkit-scrollbar-track {
+  background: transparent; /* Прозорий фон треку */
+}
+
+.dropdown__menu_item {
+  margin-top: 10px;
+  display: flex;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  color: black;
+}
+
+.dropdown__menu_checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: white; /* Білий фон за замовчуванням */
+  border: 2px solid #c4c4c4; /* Сіра рамка за замовчуванням */
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.dropdown__menu_checkbox::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0; /* Початково прихована */
+}
+
+.dropdown__menu_checkbox:checked {
+  background-color: black; /* Фон стає чорним */
+  border: 2px solid black; /* Чорна рамка */
+}
+
+/* Показує галочку при активному чекбоксі */
+.dropdown__menu_checkbox:checked::after {
+  opacity: 1;
+}

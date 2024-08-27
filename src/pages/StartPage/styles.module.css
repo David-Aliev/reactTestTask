@@ -1,0 +1,52 @@
+.button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 500px;
+}
+
+.button:hover {
+  background-color: #357abd;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.welcome {
+  margin-bottom: 20px;
+}
+
+.welcome h1 {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.startPage {
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
