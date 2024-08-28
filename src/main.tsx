@@ -5,9 +5,10 @@ import "./index.css";
 
 // react-router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import StartPage from "./pages/StartPage/StartPage";
 import UsersPage from "./pages/UsersPage/UsersPage";
+import EditUser from "./pages/EditUserPage/EditUser";
+import { FilterProvider } from "./FiltersContext";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/EditUserPage",
-    element: <App />,
+    element: <EditUser />,
     errorElement: <ErrorPage />,
   },
   {
@@ -29,6 +30,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FilterProvider>
+      <RouterProvider router={router} />
+    </FilterProvider>
   </StrictMode>
 );

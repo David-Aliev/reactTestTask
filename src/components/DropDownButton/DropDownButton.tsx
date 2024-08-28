@@ -1,5 +1,8 @@
+// DropdownSelector.tsx
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
+import { useFiltersContext } from "../../FiltersContext";
+
 interface DropDownItem {
   name: string;
   value: string;
@@ -15,33 +18,37 @@ const DropdownSelector: React.FC<DropDownButtonProps> = ({
   placeholder,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [checkedItems, setCheckedItems] = useState<Set<string>>(new Set());
+  const { filters, setFilter } = useFiltersContext();
   const [counter, setCounter] = useState(0);
+  const filterKey = placeholder;
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const checkedItems = filters[filterKey] || new Set<string>();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const handleCheckboxChange = (item: DropDownItem) => {
-    setCheckedItems((prevCheckedItems) => {
-      const newCheckedItems = new Set(prevCheckedItems);
-      if (newCheckedItems.has(item.value)) {
-        newCheckedItems.delete(item.value);
-      } else {
-        newCheckedItems.add(item.value);
-      }
-      return newCheckedItems;
-    });
+    const newCheckedItems = new Set(checkedItems);
+    if (newCheckedItems.has(item.value)) {
+      newCheckedItems.delete(item.value);
+    } else {
+      newCheckedItems.add(item.value);
+    }
+    setFilter(filterKey, newCheckedItems);
   };
 
   useEffect(() => {
     setCounter(checkedItems.size);
   }, [checkedItems]);
 
+  const text = "Selected";
+
   return (
     <div className="dropdown_container">
       <button className={styles.dropdown_btn} onClick={toggleMenu}>
-        {`${placeholder} (${counter})`}
+        {counter > 0 ? `${text} (${counter})` : `${placeholder}`}
       </button>
       {isOpen && (
         <ul className={styles.dropwdown__menu}>
